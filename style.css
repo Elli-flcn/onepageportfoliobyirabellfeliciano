@@ -1,0 +1,275 @@
+{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f6f0ea;
+  color: #000;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #ce8c57;
+}
+
+.hero, .about, .mural {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 8%;
+}
+
+.hero .text h1 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+.subheading {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #a16a3f;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: #a16a3f;
+  font-weight: bold;
+}
+
+.image-circle img {
+  width: 350px;
+  border-radius: 48% 48% 0 0;
+  object-fit: cover;
+}
+
+.about {
+  flex-direction: column;
+  text-align: left;
+}
+
+.about .text h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.image-arch img {
+  width: 300px;
+  border-radius: 50% 50% 0 0;
+  object-fit: cover;
+}
+
+.description p {
+  max-width: 500px;
+  font-size: 1rem;
+}
+.splice {
+  padding: 5rem 8%;
+  background-color: #f6f0ea;
+}
+
+.splice-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.splice-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.splice-item {
+  flex: 1;
+  min-width: 300px;
+}
+
+.splice-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.splice-item .caption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.splice-item .caption span {
+  font-weight: bold;
+  color: #ce8c57;
+  margin-right: 0.5rem;
+}
+
+
+.mural {
+  background-color: #f6f0ea;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.mural-text {
+  flex: 1;
+  padding-right: 2rem;
+  font-size: 1.5rem;
+}
+
+.caption {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #a16a3f;
+}
+
+.caption span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.mural-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+
+.mural-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 5rem 8%;
+  background-color: #fff;
+}
+
+.project {
+  max-width: 500px;
+  text-align: center;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project .caption {
+  margin-top: 1rem;
+  color: #a16a3f;
+}
+
+.project .caption span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  padding: 5rem 8%;
+  background-color: #f6f0ea;
+}
+
+.contact-text {
+  max-width: 400px;
+}
+
+.contact-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-text p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.contact-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Small Devices (phones) */
+@media (max-width: 600px) {
+  .hero, .about, .mural {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 5%;
+  }
+
+  .image-circle img,
+  .image-arch img,
+  .mural-img img,
+  .project img,
+  .contact-img img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .splice-content {
+    flex-direction: column;
+  }
+
+  .splice-item {
+    width: 100%;
+  }
+}
+
+/* Medium Devices (tablets, iPads) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero, .about, .mural {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 6%;
+  }
+
+  .splice-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .splice-item {
+    flex: 0 1 45%;
+  }
+
+  .mural-img img,
+  .image-arch img,
+  .image-circle img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* Large Devices (desktop, laptops) */
+@media (min-width: 1025px) {
+  .splice-item {
+    flex: 0 1 45%;
+  }
+
+  .splice-content {
+    flex-wrap: nowrap;
+  }
+
+  .mural-img img {
+    max-width: 500px;
+  }
+}
