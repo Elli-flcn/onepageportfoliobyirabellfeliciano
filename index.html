@@ -8,6 +8,19 @@
 </head>
 <body>
 
+  <nav class="navbar">
+    <div class="logo">Irabell</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#splice">Splice</a></li>
+      <li><a href="#mural">Mural</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+<body>
+
   <section class="hero">
     <div class="text">
       <h1><span class="highlight">Irabell</span> Feliciano</h1>
@@ -99,6 +112,14 @@
       <img src="getintouch.jpg" alt="Contact Mural">
     </div>
   </section>
+  
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+  </script>
+  
 
 </body>
 </html>
