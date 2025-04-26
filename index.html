@@ -19,8 +19,6 @@
     </ul>
   </nav>
 
-<body>
-
   <section class="hero">
     <div class="text">
       <h1><span class="highlight">Irabell</span> Feliciano</h1>
@@ -28,11 +26,11 @@
       <a href="#contact" class="link">Get in touch</a>
     </div>
     <div class="image-circle">
-      <img src="pfp.jpg" alt="Profile Image"/>
+      <img src="pfp.jpg" alt="Profile photo of Irabell Feliciano"/>
     </div>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="text">
       <h2><span class="highlight">About</span> me</h2>
     </div>
@@ -48,7 +46,7 @@
     </div>
   </section>
    
-  <section class="splice">
+  <section class="splice" id="splice">
     <h2 class="splice-title"><span class="highlight">Splice</span> of life</h2>
     <div class="splice-content">
       <div class="splice-item">
@@ -58,7 +56,7 @@
           <p>National Flag Day, 2024</p>
         </div>
       </div>
-      <div class="splice-item ">
+      <div class="splice-item">
         <img src="instflagburning.jpg" alt="Institutional Flag Burning Ceremony 2022" />
         <div class="caption">
           <span>02</span>
@@ -68,8 +66,7 @@
     </div>
   </section>
 
-
-  <section class="mural">
+  <section class="mural" id="mural">
     <div class="mural-text">
       <p>
         Brushing dreams into reality — where creativity meets purpose, and every stroke paints a story of progress, unity, and pride.
@@ -118,8 +115,14 @@
       const nav = document.getElementById("navLinks");
       nav.classList.toggle("active");
     }
+
+    // Auto-close nav on link click (for mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById("navLinks").classList.remove('active');
+      });
+    });
   </script>
-  
 
 </body>
 </html>
